@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cardio Vascular Detection</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        
+            <h2 class='container-heading'><span class="heading_font">Cardio Vascular Classification</span></h2>
+            
+    	</div>
+
+		
+		<div class="results">
+				
+			{% if prediction > 0.2 %}
+				<h1 style='color:white;'>Prediction: <span class='danger'>You might have chances of Cardio Vascular Disease.</span></h1>
+			{% elif prediction<0.2 %}
+				<h1 style='color:white;'>Prediction: <span class='safe'>Great! You have less chances CardioVascular Disease .</span></h1>
+
+
+			{% endif %}
+		</div>
+
+		
+
+	</body>
+</html>
